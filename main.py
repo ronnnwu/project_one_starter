@@ -16,11 +16,11 @@ def submit():
     # here is the machine learning piece
 
     return jsonify({
-            "typeOfForm": "",  # booking or request pricing
-            "ticker": "",  # ticker or company name
-            "shares": "",  # quantity
-            "price": "",    # price
-            "method": ""    # execute method: market price or fix price
+            "typeOfForm": email,  # booking or request pricing
+            "ticker": content,  # ticker or company name
+            "shares": "3",  # quantity
+            "price": "4",    # price
+            "method": "5"    # execute method: market price or fix price
     })
 
 if __name__ == '__main__':
