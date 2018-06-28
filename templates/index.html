@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+</head>
+
+<body>
+
+<!-- make the layout beautiful, add some title may do bootstrap if we have time-->
+
+    <form id="formoid" title="" method="post">
+         <div>
+             <label class="title">email address</label>
+             <input type="text" id="email" name="email" >
+         </div>
+         <div>
+             <label class="title">email content</label>
+             <textarea rows="10" cols="50" id="content" name="content"></textarea>
+         </div>
+         <br>
+         <div>
+             <input type="submit" id="submitButton"  name="submitButton" value="Submit">
+         </div>
+  </form>
+
+<!-- display the data retrieved form  -->
+
+<!-- booking form -->
+
+<!-- request pricing form -->
+
+</body>
+
+<script type='text/javascript'>
+    /*
+            create all js here, don't make seperate files
+
+     */
+    $("#formoid").submit(function(event) {
+
+      event.preventDefault();
+
+      // when the submit bottom is hit, hide the retrieved form
+
+      url = '/submit';
+
+      var getting = $.get( url, { email: $('#email').val(), content: $('#content').val() } );
+
+      getting.done(function( data ) {
+        console.log(data)
+
+        // based on the return data, display retrieved form
+        // and populate the right data
+
+      });
+    });
+</script>
+
+</html>
