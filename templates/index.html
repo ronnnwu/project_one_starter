@@ -22,7 +22,12 @@
          </div>
          <div>
              <label class="title">email content</label>
-             <textarea rows="10" cols="50" id="content" name="content">I want to buy 100 shares of JPMorgan Chase for $300 and Apple with 1500 shares for 0.15 cents.</textarea>
+             <textarea rows="10" cols="50" id="content" name="content">Hi
+
+I want a quote of 10000 dollars notion amount of JPMorgan Chase structure notes, and $2010.33 of Apple stock forward expiring in Jan 2019.
+
+Thank you!
+</textarea>
          </div>
          <br>
          <div>
@@ -36,10 +41,8 @@
             <th data-column-id="email">Email Address</th>
             <th data-column-id="ticker">Symbol</th>
             <th data-column-id="typeof">Action</th>
-            <th data-column-id="shares">Quantity</th>
-            <th data-column-id="shares">Asking Price</th>
-            <th data-column-id="shares">Market Price</th>
-            <th data-column-id="method">Order Type</th>
+            <th data-column-id="shares">Notional Amt</th>
+            <th data-column-id="shares">Quote Price</th>
         </tr>
     </thead>
     <tbody id="tbody" jput="tbody_template" style="border: 1px solid black;">
@@ -79,10 +82,8 @@
                         '<tr><td>' + email + '</td>'
                         + '<td>' + data.order[index].ORG + '</td>'
                         + '<td>' + data.order[index].TYPE + '</td>'
-                        + '<td>' + data.order[index].CARDINAL + '</td>'
                         + '<td>' + data.order[index].MONEY + '</td>'
-                        + '<td>' + data.order[index].market_price + '</td>'
-                        + '<td>' + data.order[index].METHOD + '</td></tr>');
+                        + '<td>' + data.order[index].market_price + '</td></tr>');
 
 
                         });

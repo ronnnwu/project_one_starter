@@ -21,7 +21,7 @@ def submit():
 
     doc = nlp(content)
 
-    keys = ['buy', 'sell', 'long', 'short' , 'hedge']
+    keys = ['quote','buy', 'sell', 'long', 'short' , 'hedge']
     intend = None
 
     for token in doc:
@@ -87,4 +87,4 @@ def submit():
     })
 
 if __name__ == '__main__':
-      app.run(host='0.0.0.0', port=10001, debug=True)
+      app.run(host='0.0.0.0', port=10011, debug=True)
